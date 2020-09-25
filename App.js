@@ -9,7 +9,6 @@ import ZipCodeScreen from './components/ZipCodeScreen';
 
 const Stack = createStackNavigator();
 
-
 // create a component
 const App = () => {
   return (
@@ -19,7 +18,6 @@ const App = () => {
         <Stack.Screen name="Weather" component={WeatherScreen} />
       </Stack.Navigator> 
     </NavigationContainer>       
-
   );
 };
 
