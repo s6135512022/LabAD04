@@ -25,10 +25,12 @@ const styles = StyleSheet.create({
         marginTop: 20,
         fontSize: 32,
         color: 'white',
+        
     },
     medium: {
         marginTop: 20,
         fontSize: 17,
         color: 'white',
+        
     }
 })
