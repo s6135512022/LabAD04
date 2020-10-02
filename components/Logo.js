@@ -9,8 +9,8 @@ export default function Logo() {
     }, 2000);
     return (        
        <View style = {styles.container}>
-           <Image style = {styles.picture} source={require('../weatherLogo.png')}/>
-           <Text style = {styles.logoText}> Weather </Text>
+           <Image style = {styles.picture} source={require('../mylogo.gif')}/>
+           <Text style = {styles.logoText}>Forecast Buddy</Text>
        </View>
            
     );
@@ -19,12 +19,12 @@ export default function Logo() {
   const styles = StyleSheet.create({
       container: {
           flex: 1,
-          backgroundColor: '#25F3FF',
+          backgroundColor: 'black',
           justifyContent: 'center',
           alignItems: 'center',
       },
       logoText: {
-          color: 'black',
+          color: 'white',
           fontSize: 30,
           marginTop: 29.1,
           fontWeight: 'bold',

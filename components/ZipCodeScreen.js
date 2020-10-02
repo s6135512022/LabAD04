@@ -6,19 +6,19 @@ import { useNavigation } from '@react-navigation/native';
 
 
 const availableZipItems = [
-    { place: 'Hatyai', code: '90110' },
-    { place: 'Trang', code: '92000' },
+    { place: 'Bangkok', code: '10100' },
+    { place: 'Suphanburi', code: '72000' },
     { place: 'Chiangmai', code: '50000' },
     { place: 'Khonkaen', code: '40000' },
     { place: 'Chonburi', code: '20000' },
-    { place: 'Phatthalung', code: '93000' },
+    { place: 'Chumphon', code: '86000' },
     { place: 'Phuket', code: '83000'}
      
 ]
 
 const ZipItem = ({ place, code, navigation }) => (
     <TouchableHighlight activeOpacity={0.8} 
-    underlayColor='black' onPress={() => navigation.navigate('Weather', { zipCode: code })}>
+    underlayColor='' onPress={() => navigation.navigate('Weather', { zipCode: code })}>
         <View style={styles.flex}>
             <Text style = {styles.text }>{place}</Text>
             <Text style = {styles.text }>{code}</Text>
@@ -33,7 +33,7 @@ export default function ZipCodeScreen() {
     const navigation = useNavigation()
     return (
         <View>
-             <ImageBackground source={require('../SC.jpg')} style={styles.backdrop} >
+             <ImageBackground source={require('../SC.gif')} style={styles.space} >
             <FlatList 
                 data={availableZipItems}
                 keyExtractor={_keyExtractor}
@@ -51,31 +51,28 @@ const styles = StyleSheet.create({
         display: 'flex',    
         flexDirection: 'row', 
         justifyContent: 'space-between',
-        paddingLeft: 30,
-        paddingRight:30,
-        margin:20,
-    
+        paddingLeft: 5,
+        paddingRight:5,
+        margin:30,
+        paddingLeft: 20
         
     },
+
+    space: {
+        width: '100%',
+        height: '100%'
+    },
+
     text: {
-        color: 'black',
+        color: 'white',
         textAlign: 'center',
-        marginRight: 50,
-        fontSize: 20,
-        fontWeight: 'bold',
-        backgroundColor: 'orange',
-        width: '100%',
-        height: '100%',
-        opacity: 0.4,
-         
+        fontSize: 25,
+        
     },
-    backdrop: {
-        width: '100%',
-        height: '100%',
     
-    },
     
    
 })
+   
 
 
